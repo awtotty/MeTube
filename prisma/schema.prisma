@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
-    url      = env("DATABASE_URL")
+    provider = "postgres"
+    url      = env("NEXT_PUBLIC_SUPABASE_URL")
 }
 
 model Post {

@@ -1,28 +1,20 @@
-# Create T3 App
+# Overview
+A proof-of-concept clone of YouTube. 
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+# Learnings
+- Prisma and DATABASE_URL env variable is required.
+    - Depolying with Vercel requires this env var.
+    - The supabase docs don't use this variable by default.
+    - There is a distinction between DATABASE_URL and NEXT_PUBLIC_SUPABASE_URL.
+    - The DATABASE_URL should start with the db language (e.g. postgresql://...)
+- Vercel has integrations with db services like planetscale and supabase.
+    - Don't forget to setup the integration on setup.
+- Deploy to production as early and often as possible.
+    - This was in Theo's guide for the twitter clone. 
+    - This allows for immediate testing in prod environment. 
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
-
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+# Deployment
+- Hosted serverless on Vercel
+- postgres database on supabase with prisma ORM
+- Auth with ...
+- Logging with ...
